@@ -77,36 +77,87 @@ body {
    HEADER
    ==================================== */
 
-header {
-    background: var(--header-fundo);
-    color: var(--texto-whats);
-    padding: var(--espaco-muito-grande) var(--espaco-medio);
-    text-align: center;
-    position: relative;
+   .hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:linear-gradient(135deg,#6b95b5,#2d5ac6);
 }
 
-header h1 {
-    font-size: 2.2em;
-    font-weight: 500;
-    margin-bottom: var(--espaco-pequeno);
-    letter-spacing: 0.5px;
+.hero h1{
+    color:#fff;
+    font-size:52px;
+    margin-bottom:15px;
 }
 
-header p {
-    font-size: 1.1em;
-    opacity: 0.9;
-    font-weight: 300;
+.hero p{
+    color:#f5f5f5;
+    font-size:22px;
+    margin-bottom:20px;
 }
 
-header .age-range {
-    display: inline-block;
-    background: rgba(255,255,255,0.2);
-    color: var(--texto-whats);
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: 400;
-    margin-top: var(--espaco-pequeno);
-    font-size: 0.9em;
+.idade{
+    background:rgba(255,255,255,.15);
+    color:#fff;
+
+    padding:14px 30px;
+    border-radius:999px;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: #2f3644;
+    padding: 8px;
+    border-radius: 999px;
+
+    width: fit-content;
+    margin: 25px auto 0;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.18),
+        inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+/* Links */
+.navbar a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+
+    padding: 14px 32px;
+    border-radius: 999px;
+
+    transition: all .3s ease;
+}
+
+/* Hover */
+.navbar a:hover{
+    background: rgba(255,255,255,.08);
+}
+
+/* Botão ativo */
+.navbar a.active{
+    background: linear-gradient(180deg,#3d7dff,#2563eb);
+    color: #fff;
+
+    box-shadow:
+        0 8px 18px rgba(37,99,235,.45),
+        inset 0 1px 0 rgba(255,255,255,.25);
 }
 
 /* ====================================
@@ -256,27 +307,24 @@ ul li::before {
 
 .stat-row,
 .stat-box {
-    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: var(--espaco-medio) 0;
 }
 
 .stat-item,
 .stat {
     text-align: center;
-    padding: var(--espaco-medio);
     background: var(--fundo-card);
     border-radius: var(--borda-raio);
     box-shadow: var(--sombra-suave);
     min-width: 140px;
-    margin: var(--espaco-pequeno);
 }
 
 .stat-item .number,
 .stat .number {
     font-size: 1.8em;
     font-weight: 600;
+    padding-top: 30px;
     color: var(--cor-primaria);
 }
 
