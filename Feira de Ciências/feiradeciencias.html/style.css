@@ -1,0 +1,528 @@
+/* ====================================
+   CSS SUAVE PARA OBESIDADE INFANTIL
+   Cores Pastel e Relaxantes
+   ==================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta de cores suaves */
+    --cor-primaria: #1d36c4;          /* Azul indigo suave */
+    --cor-secundaria: #4d557c;        /* Azul mais claro */
+    --cor-terciaria: #9575cd;          /* Roxo suave */
+    --cor-accent: #64b5f6;            /* Azul céu suave */
+    
+    /* Cores de fundo */
+    --fundo-principal: #f5f5f5;       /* Cinza muito claro */
+    --fundo-card: #ffffff;            /* Branco */
+    --fundo-gradiente: linear-gradient(135deg, #eceff1 0%, #e8eaf6 100%);
+    
+    /* Cores de alerta */
+    --alerta-suave: #fff9c4;          /* Amarelo suave */
+    --alerta-borda: #ffd54f;          /* Amarelo mostarda */
+    --perigo-suave: #fce4ec;           /* Rosa muito claro */
+    --perigo-borda: #f48fb1;          /* Rosa suave */
+    --sucesso-suave: #e8f5e9;         /* Verde muito claro */
+    --sucesso-borda: #81c784;        /* Verde suave */
+    --info-suave: #e3f2fd;            /* Azul muito claro */
+    --info-borda: #64b5f6;            /* Azul suave */
+    
+    /* Cores de texto */
+    --texto-principal: #455a64;       /* Cinza azulado escuro */
+    --texto-secundario: #607d8b;      /* Cinza azulado */
+    --texto-claro: #78909c;          /* Cinza azulado claro */
+    --texto-whats: #ffffff;
+    
+    /* Cores de headers */
+    --header-fundo: linear-gradient(135deg, #07515785, #2143b4);
+    --footer-fundo: #37474f;
+    
+    /* Espaçamento */
+    --espaco-pequeno: 10px;
+    --espaco-medio: 20px;
+    --espaco-grande: 30px;
+    --espaco-muito-grande: 40px;
+    
+    /* Bordas */
+    --borda-raio: 15px;
+    --borda-raio-pequeno: 10px;
+    
+    /* Sombras */
+    --sombra-suave: 0 2px 8px rgba(0,0,0,0.08);
+    --sombra-media: 0 5px 15px rgba(0,0,0,0.1);
+    --sombra-forte: 0 10px 30px rgba(0,0,0,0.12);
+    
+    /* Transições */
+    --transicao-suave: all 0.3s ease;
+}
+
+/* ====================================
+   BODY E ESTRUTURA PRINCIPAL
+   ==================================== */
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.8;
+    color: var(--texto-principal);
+    background: var(--fundo-gradiente);
+    min-height: 100vh;
+}
+
+/* ====================================
+   HEADER
+   ==================================== */
+
+header {
+    background: var(--header-fundo);
+    color: var(--texto-whats);
+    padding: var(--espaco-muito-grande) var(--espaco-medio);
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.2em;
+    font-weight: 500;
+    margin-bottom: var(--espaco-pequeno);
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+header .age-range {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: var(--texto-whats);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 400;
+    margin-top: var(--espaco-pequeno);
+    font-size: 0.9em;
+}
+
+/* ====================================
+   CONTAINER E CARDS
+   ==================================== */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--espaco-medio);
+}
+
+.card {
+    background: var(--fundo-card);
+    border-radius: var(--borda-raio);
+    padding: var(--espaco-grande);
+    margin-bottom: var(--espaco-medio);
+    box-shadow: var(--sombra-media);
+    transition: var(--transicao-suave);
+}
+
+.card:hover {
+    box-shadow: var(--sombra-forte);
+    transform: translateY(-2px);
+}
+
+/* Títulos dos cards */
+.card h2 {
+    color: var(--cor-primaria);
+    font-size: 1.6em;
+    font-weight: 500;
+    margin-bottom: var(--espaco-medio);
+    padding-bottom: var(--espaco-pequeno);
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+
+.card h3 {
+    color: var(--texto-principal);
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: var(--espaco-grande) 0 var(--espaco-pequeno);
+}
+
+.card p {
+    color: var(--texto-secundario);
+    margin-bottom: var(--espaco-pequeno);
+}
+
+/* ====================================
+   CAIXAS DE INFORMAÇÃO
+   ==================================== */
+
+/* Caixa de destaque/amarelo */
+.highlight-box,
+.tip-box {
+    background: var(--alerta-suave);
+    border-left: 4px solid var(--alerta-borda);
+    padding: var(--espaco-medio);
+    border-radius: var(--borda-raio-pequeno);
+    margin: var(--espaco-medio) 0;
+}
+
+.highlight-box h3,
+.tip-box h3 {
+    color: #f57f17;
+    margin-top: 0;
+}
+
+/* Caixa de danger/vermelho suave */
+.warning-box,
+.danger-box {
+    background: var(--perigo-suave);
+    border-left: 4px solid var(--perigo-borda);
+    padding: var(--espaco-medio);
+    border-radius: var(--borda-raio-pequeno);
+    margin: var(--espaco-medio) 0;
+}
+
+.warning-box h3,
+.danger-box h3 {
+    color: #c2185b;
+    margin-top: 0;
+}
+
+/* Caixa de sucesso/verde */
+.safe-box,
+.tip-box {
+    background: var(--sucesso-suave);
+    border-left: 4px solid var(--sucesso-borda);
+    padding: var(--espaco-medio);
+    border-radius: var(--borda-raio-pequeno);
+    margin: var(--espaco-medio) 0;
+}
+
+.safe-box h3 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+/* Caixa de informação */
+.info-box {
+    background: var(--info-suave);
+    border-left: 4px solid var(--info-borda);
+    padding: var(--espaco-medio);
+    border-radius: var(--borda-raio-pequeno);
+    margin: var(--espaco-medio) 0;
+}
+
+.info-box h3 {
+    color: var(--cor-primaria);
+    margin-top: 0;
+}
+
+/* ====================================
+   LISTAS
+   ==================================== */
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: var(--espaco-pequeno) 0;
+}
+
+ul li {
+    padding: var(--espaco-pequeno) 0 var(--espaco-pequeno) 30px;
+    position: relative;
+    color: var(--texto-secundario);
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    left: 10px;
+    color: var(--cor-secundaria);
+    font-size: 1.2em;
+}
+
+/* Listas com check */
+ul li::before {
+    content: "✓";
+    color: var(--sucesso-borda);
+}
+
+/* ====================================
+   ESTATÍSTICAS
+   ==================================== */
+
+.stat-row,
+.stat-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: var(--espaco-medio) 0;
+}
+
+.stat-item,
+.stat {
+    text-align: center;
+    padding: var(--espaco-medio);
+    background: var(--fundo-card);
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra-suave);
+    min-width: 140px;
+    margin: var(--espaco-pequeno);
+}
+
+.stat-item .number,
+.stat .number {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.stat-item div,
+.stat .label {
+    font-size: 0.85em;
+    color: var(--texto-claro);
+    margin-top: var(--espaco-pequeno);
+}
+
+/* ====================================
+   GRADES DE ÍCONES
+   ==================================== */
+
+.icon-grid,
+.food-grid,
+.food-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--espaco-pequeno);
+    margin: var(--espaco-medio) 0;
+}
+
+.icon-card,
+.food-item {
+    padding: var(--espaco-medio);
+    border-radius: var(--borda-raio-pequeno);
+    text-align: center;
+    transition: var(--transicao-suave);
+}
+
+.icon-card:hover,
+.food-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-suave);
+}
+
+.icon-card .icon {
+    font-size: 2em;
+    margin-bottom: 8px;
+}
+
+/* Cores dos food-items */
+.food-item.good,
+.icon-card.good {
+    background: var(--sucesso-suave);
+    border: 1px solid var(--sucesso-borda);
+    color: #558b2f;
+}
+
+.food-item.avoid,
+.icon-card.bad {
+    background: var(--perigo-suave);
+    border: 1px solid var(--perigo-borda);
+    color: #ad1457;
+}
+
+.food-item.warning,
+.icon-card.warning {
+    background: var(--alerta-suave);
+    border: 1px solid var(--alerta-borda);
+    color: #f57f17;
+}
+
+/* ====================================
+   TABELAS
+   ==================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--espaco-medio) 0;
+}
+
+th, td {
+    padding: var(--espaco-pequeno) var(--espaco-medio);
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background: var(--cor-primaria);
+    color: var(--texto-whats);
+    font-weight: 500;
+}
+
+tr:hover {
+    background: #fafafa;
+}
+
+/* ====================================
+   RODAPÉ
+   ==================================== */
+
+footer {
+    background: var(--footer-fundo);
+    color: #b0bec5;
+    text-align: center;
+    padding: var(--espaco-grande);
+    margin-top: var(--espaco-grande);
+}
+
+footer p {
+    margin-bottom: var(--espaco-pequeno);
+}
+
+footer em {
+    color: #78909c;
+}
+
+/* ====================================
+   RESPONSIVIDADE
+   ==================================== */
+
+@media (max-width: 600px) {
+    :root {
+        --espaco-grande: 20px;
+        --espaco-medio: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.7em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+    
+    .card {
+        padding: var(--espaco-medio);
+    }
+    
+    .card h2 {
+        font-size: 1.4em;
+    }
+    
+    .stat-item,
+    .stat {
+        min-width: 100px;
+        padding: var(--espaco-pequeno);
+    }
+    
+    .stat-item .number,
+    .stat .number {
+        font-size: 1.4em;
+    }
+    
+    .icon-grid,
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ====================================
+   ANIMAÇÕES SUAVES
+   ==================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* ====================================
+   TIPOGRAFIA
+   ==================================== */
+
+strong {
+    color: var(--texto-principal);
+    font-weight: 600;
+}
+
+em {
+    color: var(--texto-claro);
+    font-style: italic;
+}
+
+/* Links */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: var(--transicao-suave);
+}
+
+a:hover {
+    color: var(--cor-terciaria);
+    text-decoration: underline;
+}
+
+/* ====================================
+   BOTÕES (se necessário)
+   ==================================== */
+
+.botao {
+    display: inline-block;
+    background: var(--cor-primaria);
+    color: var(--texto-whats);
+    padding: 12px 25px;
+    border-radius: var(--borda-raio);
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: var(--transicao-suave);
+}
+
+.botao:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-media);
+}
+
+/* ====================================
+   ESCROLLBAR PERSONALIZADA
+   ==================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-secundaria);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-primaria);
+}
+
+/* ====================================
+   SELEÇÃO DE TEXTO
+   ==================================== */
+
+::selection {
+    background: var(--cor-secundaria);
+    color: var(--texto-whats);
+}
